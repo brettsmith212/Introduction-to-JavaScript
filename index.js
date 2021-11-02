@@ -263,7 +263,20 @@ HINT - you may need to study tomorrow's content on arrays
 HINT - try looking up the .includes() method
 */
 
-function vowelCounter() {}
+function vowelCounter(vowelString) {
+  let arr = [];
+  let vowelsArr = ["a", "e", "i", "o", "u"];
+  vowelString = vowelString.toLowerCase();
+  for (let i = 0; i < vowelString.length; i++) {
+    if (vowelsArr.includes(vowelString[i])) {
+      arr.push(vowelString[i]);
+    }
+  }
+  let totalVowels = arr.length;
+  return totalVowels;
+}
+
+console.log(vowelCounter("WherE the wild things are.")); // 7 vowels
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo() {
